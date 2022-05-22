@@ -1,10 +1,10 @@
-import Navbar from '@components/Navbar/Navbar';
-import React from 'react';
+import React, { useState } from 'react';
 
 const Home = () => {
+  const [productList, setProductList] = useState([]);
+
   return (
     <div>
-      <Navbar />
       <p>Home de Prueba</p>
     </div>
   );
