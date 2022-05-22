@@ -1,19 +1,10 @@
-import Link from 'next/link';
 import React from 'react';
+import SearchBar from '@commons/inputs/SearchBar/SearchBar';
 
 const Navbar = () => {
   return (
     <div>
-      <nav>
-        <menu>
-          <Link href='/'>
-            <a>Home</a>
-          </Link>
-          <Link href='/about'>
-            <a>About</a>
-          </Link>
-        </menu>
-      </nav>
+      <SearchBar />
     </div>
   );
 };
