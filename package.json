@@ -1,0 +1,27 @@
+{
+  "name": "challenge-mercadolibre",
+  "version": "1.0.0",
+  "description": "This is description for Challenge - MercadoLibre.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanniieGil/challenge-mercadolibre.git"
+  },
+  "keywords": [],
+  "author": "Daniel Gil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanniieGil/challenge-mercadolibre/issues"
+  },
+  "homepage": "https://github.com/DanniieGil/challenge-mercadolibre#readme",
+  "dependencies": {
+    "next": "^12.1.6",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}
