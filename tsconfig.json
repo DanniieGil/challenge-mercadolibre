@@ -26,6 +26,21 @@
       ],
       "@commons/*": [
         "src/components/commons/*"
+      ],
+      "@services/*": [
+        "src/services/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@tools/*": [
+        "src/tools/*"
+      ],
+      "@mappers/*": [
+        "src/mappers/*"
+      ],
+      "@dtos/*": [
+        "src/shared/dtos/*"
       ]
     }
   },
@@ -33,7 +48,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+],
   "exclude": [
     "node_modules"
   ]
