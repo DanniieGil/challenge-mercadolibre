@@ -1,0 +1,11 @@
+@import '../../../../styles/designTokens';
+
+.SearchBarContainer {
+  font-size: $typography_size_sm4;
+
+  .InputSearch{
+    width: 598px;
+    height: 39px;
+
+  }
+}

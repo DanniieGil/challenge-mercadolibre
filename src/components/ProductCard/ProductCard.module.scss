@@ -1,0 +1,29 @@
+@import '../../styles/designTokens';
+
+.ProductCardContainer {
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: repeat(3, fr);
+  max-width: 1180px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+
+  &:hover{
+    background-color: $background_color_gray_1;
+  }
+
+  .TitleProduct {
+    font-size: $lineHeight_size_sm4;
+    grid-column-start: 2;
+  }
+
+  .PriceProduct {
+    font-size: $lineHeight_size_md2;
+    grid-column-start: 2;
+  }
+
+  .ImageProduct {
+    border:1px solid blue
+  }
+}

@@ -1,12 +1,29 @@
-import React from 'react';
+import style from './ProductCard.module.scss';
 
-const ProductCard = ({ title, price, currency, free_shipping, picture }) => {
+type ProductCardProps = {
+  title: string;
+  price: number;
+  currency: string;
+  free_shipping: boolean;
+  picture: string;
+  onClick: () => void;
+};
+
+const ProductCard = ({
+  title,
+  price,
+  currency,
+  free_shipping,
+  picture,
+  onClick,
+}: ProductCardProps) => {
   return (
-    <div>
-      <img src={picture} alt="" width="20%" />
-      <div>{title}</div>
-      <div>{price + ' ' + currency}</div>
-      <div>{free_shipping ? "Free" : "Na"}</div>
+    <div className={style.ProductCardContainer} onClick={onClick}>
+      <img className={style.ImageProduct} src={picture} alt="" width="20%" />
+      <div className={style.PriceProduct}>{'$ ' + price}</div>
+      <div className={style.TitleProduct}>{title}</div>
+      <div>{free_shipping ? 'Free' : 'Na'}</div>
+      <div>Bogotá</div>
     </div>
   );
 };

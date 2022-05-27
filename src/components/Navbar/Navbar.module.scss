@@ -1,0 +1,9 @@
+@import '../../styles/designTokens';
+
+.NavbarContainer {
+  background-color: $brand_primary_color !important;
+  width:100%;
+  height: 56px;
+  display:flex;
+  justify-content: center;
+}
