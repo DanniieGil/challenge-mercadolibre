@@ -1,5 +1,5 @@
-const API = process.env.API;
-const SITE = process.env.SITE;
+export const API = process.env.API;
+export const SITE = process.env.SITE;
 
 const endPoints = {
   products: {

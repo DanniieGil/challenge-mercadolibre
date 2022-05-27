@@ -7,5 +7,5 @@
 
 # vercel
 .vercel
-.env.local
-.env
+# .env.local
+# .env

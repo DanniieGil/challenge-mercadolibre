@@ -1,24 +1,42 @@
+import ProductCard from '@components/ProductCard/ProductCard';
+import { Head } from '@context/Shared/Seo/components/Head';
 import useFetch from '@hooks/useFetch';
+import { GetServerSideProps } from 'next';
 import React from 'react';
 
-export async function getServerSideProps(params) {
-  const { query } = params;
+export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const { search } = query;
-  const response = await useFetch({ url: `http://localhost:3000/api/items?q=${search}` });
+  const response = await useFetch({
+    url: `http://localhost:3000/api/items?q=${search}`,
+  });
 
   return {
     props: {
       productList: response,
     },
   };
-}
+};
 
 const ProductCatalog = ({ productList }) => {
-  const { categories, items } = productList;
+  const { items } = productList;
   return (
     <div>
-      {items.map((item) => {
-        return <div>{item.title}</div>;
+      <Head />
+
+      {items.map((product) => {
+        const { id, title, price, free_shipping, picture } = product;
+        const { currency, amount } = price;
+
+        return (
+          <ProductCard
+            key={id}
+            title={title}
+            picture={picture}
+            price={amount}
+            currency={currency}
+            free_shipping={free_shipping}
+          />
+        );
       })}
     </div>
   );
