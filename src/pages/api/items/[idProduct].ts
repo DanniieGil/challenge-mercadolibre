@@ -9,7 +9,7 @@ const GetProductDetail = async (request: NextApiRequest, response: NextApiRespon
   const dataProductDetail = await useFetch({ url: endPoints.products.getProductDetail(idProduct) });
   const dataProductDescription = await useFetch({ url: endPoints.products.getProductDescription(idProduct) });
   const dataProductCompleted = { ...dataProductDetail, ...dataProductDescription };
-
+  
   const result = GetProductDetailMapper({ dataProduct: dataProductCompleted });
 
   response.setHeader('Content-type', 'application/json');

@@ -1,7 +1,17 @@
 import { DetailProductMapperDto } from '@dtos/detail-product-mapper.dto';
 
 export function GetProductDetailMapper({
-  dataProduct: { id, title, price, currency_id, thumbnail, condition, shipping, sold_quantity, plain_text },
+  dataProduct: {
+    id,
+    title,
+    price,
+    currency_id,
+    thumbnail,
+    condition,
+    shipping,
+    sold_quantity,
+    plain_text,
+  },
 }): DetailProductMapperDto {
   return {
     author: {

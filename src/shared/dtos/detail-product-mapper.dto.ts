@@ -1,6 +1,6 @@
 export interface DetailProductMapperDto {
   author: Author;
-  item:   Item;
+  item: Item;
 }
 
 export interface Author {

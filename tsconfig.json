@@ -29,12 +29,13 @@
       "@mappers/*": ["src/mappers/*"],
       "@dtos/*": ["src/shared/dtos/*"],
       "@styles/*": ["src/styles/*"],
+      "@utils/*": ["src/utils/*"],
     }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/context/historySearchContext"],
+, "src/context/historySearchContext", "src/utils/getItems.js"],
   "exclude": ["node_modules"]
 }

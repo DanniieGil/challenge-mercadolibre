@@ -1,12 +1,23 @@
 import Button, { ButtonVariants } from '@components/commons/Button/Button';
+import LabelCategory from '@components/LabelCategory/LabelCategory';
+import { moneyFormat } from '@utils/moneyFormat';
 import style from './ProductDetail.module.scss';
 
 const ProductDetail = ({ productDetail }) => {
-  const { description, free_shipping, id, picture, price, sold_quantity, title } =
-    productDetail;
+  const {
+    description,
+    condition,
+    free_shipping,
+    id,
+    picture,
+    price,
+    sold_quantity,
+    title,
+  } = productDetail;
 
   return (
-    <div className={style.ProductDetailContainer}>
+    <section className={style.ProductDetailContainer}>
+      {/* <LabelCategory categories={productCategory} /> */}
       <img
         className={style.ProductImage}
         src={picture}
@@ -14,19 +25,26 @@ const ProductDetail = ({ productDetail }) => {
         alt={`Foto de ${title} | Mercado Libre`}
         title={`${title} en Venta en Mercado Libre.`}
       />
-      <section className={style.ProductDetailSubContainer__1}>
+
+      <main className={style.ProductDetailSubContainer__1}>
+        <span className={style.ProductCondition}>
+          {condition === 'new' ? 'Nuevo' : 'Usado'}
+          {' - '}
+          {sold_quantity >= 0 ? `${sold_quantity} vendidos` : ''}
+        </span>
+
         <div className={style.ProductTitle}>{title}</div>
-        <div className={style.ProductPrice}>$ {price.amount}</div>
+        <div className={style.ProductPrice}>{moneyFormat(price.amount)}</div>
         <div className={style.ProductCTA}>
           <Button appearance={ButtonVariants.PRIMARY} />
         </div>
-      </section>
+      </main>
 
-      <div>
-        Descriṕción del producto
+      <main>
+        Descripción del producto
         <div className={style.ProductDescription}>{description}</div>
-      </div>
-    </div>
+      </main>
+    </section>
   );
 };
 
