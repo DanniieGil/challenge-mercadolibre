@@ -5,7 +5,13 @@ class MyDocument extends Document {
     return (
       <Html lang="es">
         <Head>
-          {/* <link rel="preload" href="/fonts/Satoshi-Regular.woff2" as="font" type="font/woff2" crossOrigin="" /> */}
+          <link
+            rel="preload"
+            href="/fonts/proximanova-light.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin=""
+          />
         </Head>
         <body>
           <Main />

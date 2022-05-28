@@ -7,6 +7,8 @@ $brand_blank_color:       #EEEEEE;
 
 // BUTTON COLORS
 $button_primary_color:    #3483FA;
+$button_secondary_color:  #999999;
+
 
 // PALLETTE EXTENDED
 $background_color_gray_1:  #ededed;
@@ -52,3 +54,23 @@ $lineWeight_book     : '300';
 $lineWeight_regular  : '400';
 $lineWeight_bold     : '500';
 $lineWeight_black    : '600';
+
+
+// FONTS-FAMILY
+@font-face {
+  font-family: "Proxima-Nova-Ligth";
+  font-display: optional;
+  src: url("/fonts/proximanova-light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Proxima-Nova-Regular";
+  font-display: optional;
+  src: url("/fonts/proximanova-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Proxima-Nova-Semibold";
+  font-display: optional;
+  src: url("/fonts/proximanova-semibold.woff2") format("woff2");
+}

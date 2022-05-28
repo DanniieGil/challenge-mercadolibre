@@ -1,0 +1,11 @@
+@import '../../../styles/mixins';
+@import '../../../styles/designTokens';
+
+
+.PRIMARY {
+  @include buttonTheme($button_primary_color);
+}
+
+.SECONDARY {
+  @include buttonTheme($button_secondary_color);
+}

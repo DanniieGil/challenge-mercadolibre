@@ -1,7 +1,16 @@
-const Button = () => {
-  return (
-    <button>Button</button>
-  )
+import buttonStyles from './Button.module.scss';
+
+export enum ButtonVariants {
+  PRIMARY = 'PRIMARY',
+  SECONDARY = 'SECONDARY',
 }
 
-export default Button
+type ButtonProps = {
+  appearance: ButtonVariants;
+};
+
+const Button = ({ appearance }: ButtonProps) => {
+  return <button className={buttonStyles[appearance]}>Comprar</button>;
+};
+
+export default Button;

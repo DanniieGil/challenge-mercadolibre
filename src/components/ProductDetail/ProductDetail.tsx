@@ -1,4 +1,4 @@
-import Button from '@components/commons/Button/Button';
+import Button, { ButtonVariants } from '@components/commons/Button/Button';
 import style from './ProductDetail.module.scss';
 
 const ProductDetail = ({ productDetail }) => {
@@ -18,7 +18,7 @@ const ProductDetail = ({ productDetail }) => {
         <div className={style.ProductTitle}>{title}</div>
         <div className={style.ProductPrice}>$ {price.amount}</div>
         <div className={style.ProductCTA}>
-          <Button />
+          <Button appearance={ButtonVariants.PRIMARY} />
         </div>
       </section>
 
