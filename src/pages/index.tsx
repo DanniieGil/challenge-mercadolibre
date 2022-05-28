@@ -1,4 +1,4 @@
-import { Head } from '@context/Shared/Seo/components/Head';
+import { Head } from '@context/share/Seo/components/Head';
 
 const Home = () => {
   return (

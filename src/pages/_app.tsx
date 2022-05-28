@@ -1,12 +1,16 @@
 import { AppProps } from 'next/app';
 import Layout from '@components/Layout/Layout';
 import '../styles/globals.scss';
+import { HistorySearchProvider } from '@context/historySearchContext/historySearchContext';
 
+HistorySearchProvider;
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout >
-      <Component {...pageProps} />
-    </Layout>
+    <HistorySearchProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </HistorySearchProvider>
   );
 }
 

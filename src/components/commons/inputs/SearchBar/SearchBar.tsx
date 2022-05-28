@@ -1,6 +1,7 @@
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import style from './SearchBar.module.scss';
+import { useHistorySearch } from '@hooks/useHistorySearch';
 
 type SearchBarProps = {
   searchPath?: string;
@@ -9,7 +10,8 @@ type SearchBarProps = {
 const SearchBar = ({ searchPath = '/items?search=' }: SearchBarProps) => {
   const router = useRouter();
   const searchInputRef = useRef(null);
-  const [focusInput, setfocusInput] = useState(false);
+  const { newHistorySearch } = useHistorySearch();
+  
 
   useEffect(() => {
     if (searchPath.length === 0) router.push('/');
@@ -18,6 +20,7 @@ const SearchBar = ({ searchPath = '/items?search=' }: SearchBarProps) => {
   const handleSubmit = (e) => {
     e.target.blur();
     const query = searchInputRef?.current?.value;
+    newHistorySearch(query)
     router.push(`${searchPath}${query}`);
   };
 

@@ -21,7 +21,7 @@
     "jsx": "preserve",
     "paths": {
       "@components/*": ["src/components/*"],
-      "@context/*": ["src/Context/*"],
+      "@context/*": ["src/context/*"],
       "@commons/*": ["src/components/commons/*"],
       "@services/*": ["src/services/*"],
       "@hooks/*": ["src/hooks/*"],
@@ -35,6 +35,6 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-],
+, "src/context/historySearchContext"],
   "exclude": ["node_modules"]
 }

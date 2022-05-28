@@ -1,7 +1,7 @@
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import ProductCard from '@components/ProductCard/ProductCard';
-import { Head } from '@context/Shared/Seo/components/Head';
+import { Head } from '@context/share/Seo/components/Head';
 import useFetch from '@hooks/useFetch';
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {

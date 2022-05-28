@@ -4,7 +4,7 @@ import style from './Navbar.module.scss';
 
 const Navbar = () => {
   const { NavbarContainer, NavbarIcon } = style;
-  
+
   return (
     <header className={NavbarContainer}>
       <div className={NavbarIcon}>
