@@ -1,17 +1,22 @@
 @import '@styles/designTokens';
 
+.ContainerProducts{
+  width: fit-content;
+  margin: auto;
+  margin-top: 48px;
+  max-width: 1080px;
+  padding: 20px 50px 20px 0;
+  background-color: $background_color_white_1;
+  border-radius: 4px 4px 0 0;
+}
+
 .ProductCardContainer {
-  border: 1px solid red;
   display: grid;
   grid-template-columns: repeat(3, fr);
   max-width: 1180px;
   cursor: pointer;
   transition: all 0.3s ease;
-
-
-  &:hover{
-    background-color: $background_color_gray_1;
-  }
+  border-bottom: thin solid #eee;
 
   .TitleProduct {
     font-size: $lineHeight_size_sm4;
@@ -23,7 +28,15 @@
     grid-column-start: 2;
   }
 
+  .ShippingProduct {
+    grid-column-start: 2;
+
+  }
+
   .ImageProduct {
-    border:1px solid blue
+    grid-column-start: 1;
+    width: 160px;
+    height: 160px;
+
   }
 }

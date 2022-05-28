@@ -4,7 +4,7 @@ import style from './Icon.module.scss';
 
 type IconProps = {
   src?: string;
-  width: number;
+  width?: number;
   height?: number;
   quality?: number;
   priority?: boolean;
@@ -17,7 +17,7 @@ const Icon = ({
   height = 100,
   quality = 100,
   priority = true,
-  onclick = () => router.push('/'),
+  onclick,
 }: IconProps) => {
   return (
     <>
