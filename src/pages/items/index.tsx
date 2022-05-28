@@ -63,7 +63,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 
   return {
     props: {
-      productList: response,
+      productList: { ...response },
       query: query.search,
     },
   };
