@@ -1,42 +1,63 @@
 @import '@styles/designTokens';
 
-.ContainerProducts{
+.ContainerProducts {
   width: fit-content;
   margin: auto;
   margin-top: 48px;
-  max-width: 1080px;
-  padding: 20px 50px 20px 0;
+  width: 724px;
   background-color: $background_color_white_1;
   border-radius: 4px 4px 0 0;
 }
 
 .ProductCardContainer {
   display: grid;
-  grid-template-columns: repeat(3, fr);
+  grid-template-columns: 200px auto;
+  grid-template-rows: 45px 110px;
   max-width: 1180px;
   cursor: pointer;
   transition: all 0.3s ease;
   border-bottom: thin solid #eee;
+  padding: 20px 50px 20px 0;
 
-  .TitleProduct {
-    font-size: $lineHeight_size_sm4;
-    grid-column-start: 2;
-  }
-
-  .PriceProduct {
-    font-size: $lineHeight_size_md2;
-    grid-column-start: 2;
-  }
-
-  .ShippingProduct {
-    grid-column-start: 2;
-
+  &:hover {
+    border-bottom: 1px solid rgb(212, 211, 211);
   }
 
   .ImageProduct {
     grid-column-start: 1;
+    grid-row: 1/3;
     width: 160px;
     height: 160px;
+    margin-left: 24px;
+    margin-right: 16px;
+  }
 
+  .TitleProduct {
+    font-size: $lineHeight_size_sm4;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    width: 330px;
+  }
+
+  .CityProduct{
+    margin-top: 20px;
+    grid-column-start: 3;
+    color: gray;
+    font-size: 12px;
+    text-align-last: right;
+  }
+
+  .SubContainer {
+    display: flex;
+    margin-top: 9px;
+
+    .PriceProduct {
+      font-size: $lineHeight_size_md2;
+    }
+
+    .ShippingProduct {
+      margin-left: 10px;
+      margin-top: 9px;
+    }
   }
 }

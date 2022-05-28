@@ -10,7 +10,7 @@ type SearchBarProps = {
 const SearchBar = ({ searchPath = '/items?search=' }: SearchBarProps) => {
   const router = useRouter();
   const searchInputRef = useRef(null);
-  const { newHistorySearch } = useHistorySearch();
+  const { newHistorySearch }: any = useHistorySearch();
   
 
   useEffect(() => {

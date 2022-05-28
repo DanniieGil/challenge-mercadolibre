@@ -5,9 +5,10 @@ import style from '@components/ProductCard/ProductCard.module.scss';
 import { Head } from '@context/share/Seo/components/Head';
 import useFetch from '@hooks/useFetch';
 import ProductNotFound from '@components/ProductNotFound/ProductNotFound';
+import LabelCategory from '@components/LabelCategory/LabelCategory';
 
 const ProductCatalog = ({ productList, query }) => {
-  const { items } = productList;
+  const { items, categories } = productList;
   const { ContainerProducts } = style;
   const router = useRouter();
 
@@ -18,13 +19,16 @@ const ProductCatalog = ({ productList, query }) => {
   return (
     <section>
       <Head title={query ? `${query} | MercadoLibre` : undefined} />
-      
+
       {items?.length <= 0 && <ProductNotFound />}
 
       {items?.length >= 1 && (
         <div className={ContainerProducts}>
+          
+          <LabelCategory categories={categories} />
+
           {items.map((product) => {
-            const { id, title, price, free_shipping, picture } = product;
+            const { id, title, price, free_shipping, picture, state_name } = product;
             const { amount } = price;
 
             return (
@@ -34,6 +38,7 @@ const ProductCatalog = ({ productList, query }) => {
                 picture={picture}
                 price={amount}
                 free_shipping={free_shipping}
+                state_name={state_name}
                 onClick={() =>
                   goToDetailProduct({
                     idProduct: id,

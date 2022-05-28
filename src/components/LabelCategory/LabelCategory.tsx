@@ -1,9 +1,9 @@
-import React from 'react'
+import style from './LabelCategory.module.scss';
 
-const LabelCategory = () => {
-  return (
-    <div>Test1 > Test2 > Test3 > Test4</div>
-  )
-}
+const LabelCategory = ({ categories }) => {
+  const formattedLabelCategories = categories.join(' > ');
 
-export default LabelCategory
+  return <div className={style.LabelCategoryContainer}>{formattedLabelCategories}</div>;
+};
+
+export default LabelCategory;

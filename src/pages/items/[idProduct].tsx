@@ -1,16 +1,10 @@
-import LabelCategory from '@components/LabelCategory/LabelCategory';
 import ProductDetail from '@components/ProductDetail/ProductDetail';
 import useFetch from '@hooks/useFetch';
-import { useRouter } from 'next/router';
 import { GetServerSideProps } from 'next/types';
 
 const ProductItem = ({ productDetail }) => {
-  const router = useRouter();
-  const { idProduct } = router.query;
-
   return (
     <>
-      <LabelCategory />
       <ProductDetail productDetail={productDetail} />
     </>
   );

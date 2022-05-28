@@ -1,6 +1,6 @@
 import { createContext, useState } from 'react';
 
-export const HistorySearchContext = createContext();
+export const HistorySearchContext = createContext({} as any);
 
 export const HistorySearchProvider = ({ children }) => {
   const [historySearch, setHistorySearch] = useState(["hola"]);
