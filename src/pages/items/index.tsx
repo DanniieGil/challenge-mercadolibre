@@ -16,13 +16,21 @@ const ProductCatalog = ({ productList, query }) => {
     router.push(`/items/${idProduct}`);
   };
 
+  const emptyCatalogProduct = () => {
+    const productListStatus = items?.length;
+    console.log(productListStatus);
+    if (productListStatus <= 0 || productListStatus === undefined) {
+      return true;
+    }
+  };
+
   return (
     <section className={ContainerProducts}>
       <Head title={query && items?.length >= 1 ? `${query} | MercadoLibre` : undefined} />
 
-      {items?.length <= 0 && <ProductNotFound />}
-
-      {items?.length >= 1 && (
+      {emptyCatalogProduct() ? (
+        <ProductNotFound />
+      ) : (
         <>
           <LabelCategory categories={categories} />
           <div className={'ContainerProducts'}>
