@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import style from './Navbar.module.scss';
 
 const Navbar = () => {
-  const { NavbarContainer, NavbarIcon } = style;
+  const { NavbarContainer, NavbarSubcontainer, NavbarIcon } = style;
   const router = useRouter();
 
   const handleHome = () => {
@@ -13,10 +13,12 @@ const Navbar = () => {
 
   return (
     <header className={NavbarContainer}>
-      <div className={NavbarIcon}>
-        <Icon onclick={handleHome} />
+      <div className={NavbarSubcontainer}>
+        <div className={NavbarIcon}>
+          <Icon onclick={handleHome} />
+        </div>
+        <SearchBar searchPath="/items?search=" />
       </div>
-      <SearchBar searchPath="/items?search=" />
     </header>
   );
 };

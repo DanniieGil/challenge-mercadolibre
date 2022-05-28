@@ -1,37 +1,67 @@
 @import '@styles/designTokens';
 
 .ProductDetailContainer {
-  background-color: $background_color_white_1;
-  max-width: 800px;
-  display: grid;
-  grid-template-columns: 500px 300px;
-  grid-template-rows: 1fr 1fr;
+  width: fit-content;
   margin: auto;
-  margin-top: 32px;
-  padding:24px;
+  width: 1028px;
+  border-radius: 4px 4px 0 0;
 
-  .ProductImage {
-    grid-column: 1 1;
-  }
+  .ProductDetailData {
+    background-color: $background_color_white_1;
+    max-width: fit-content;
+    display: grid;
+    grid-template-columns: 712px auto;
+    grid-template-rows: auto auto;
+    margin: auto;
+    padding-left: 24px;
 
-  .ProductDetailSubContainer__1 {
-    grid-column: 2;
-    grid-row: 1;
-
-    .ProductTitle {
+    .ProductImage {
+      grid-column: 1 1;
+      margin-right: 32px;
     }
 
-    .ProductPrice {
+    .ProductDetailSubContainer__1 {
+      grid-column: 2;
+      grid-row: 1;
+      margin-top: 32px;
+
+      .ProductCondition {
+        font-size: $typography_size_sm2;
+        margin-bottom: 16px;
+      }
+
+      .ProductTitle {
+        font-size: $typography_size_md2;
+        font-weight: 900;
+        margin-bottom: 32px;
+        margin-right: 32px;
+      }
+
+      .ProductPrice {
+        font-size: $typography_size_lg5;
+        margin-bottom: 32px;
+      }
+
+      .ProductCTA {
+        margin-right: 32px;
+      }
     }
 
-    .ProductCTA {
-      
+    .ProductDescriptionTitle {
+      font-size: $typography_size_md4;
+      margin-top: 32px;
+      margin-bottom: 32px;
+      margin-left: 32px;
+      font-weight: 600;
     }
-  }
 
-  .ProductDescription {
-    width: 100%;
-    grid-column: 1;
-    grid-row: 1;
+    .ProductDescriptionContent {
+      margin-left: 32px;
+      font-size: $typography_size_sm3;
+      width: 100%;
+      grid-column: 1;
+      grid-row: 1;
+      margin-bottom: 32px;
+    }
   }
 }

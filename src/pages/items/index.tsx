@@ -17,37 +17,37 @@ const ProductCatalog = ({ productList, query }) => {
   };
 
   return (
-    <section>
-      <Head title={query ? `${query} | MercadoLibre` : undefined} />
+    <section className={ContainerProducts}>
+      <Head title={query && items?.length >= 1 ? `${query} | MercadoLibre` : undefined} />
 
       {items?.length <= 0 && <ProductNotFound />}
 
       {items?.length >= 1 && (
-        <div className={ContainerProducts}>
-          
+        <>
           <LabelCategory categories={categories} />
+          <div className={'ContainerProducts'}>
+            {items.map((product) => {
+              const { id, title, price, free_shipping, picture, state_name } = product;
+              const { amount } = price;
 
-          {items.map((product) => {
-            const { id, title, price, free_shipping, picture, state_name } = product;
-            const { amount } = price;
-
-            return (
-              <ProductCard
-                key={id}
-                title={title}
-                picture={picture}
-                price={amount}
-                free_shipping={free_shipping}
-                state_name={state_name}
-                onClick={() =>
-                  goToDetailProduct({
-                    idProduct: id,
-                  })
-                }
-              />
-            );
-          })}
-        </div>
+              return (
+                <ProductCard
+                  key={id}
+                  title={title}
+                  picture={picture}
+                  price={amount}
+                  free_shipping={free_shipping}
+                  state_name={state_name}
+                  onClick={() =>
+                    goToDetailProduct({
+                      idProduct: id,
+                    })
+                  }
+                />
+              );
+            })}
+          </div>
+        </>
       )}
     </section>
   );

@@ -39,20 +39,20 @@ const ProductCard = ({
       />
 
       <div className={SubContainer}>
-        <div className={PriceProduct}>{moneyFormat(price)}</div>
+        <span className={PriceProduct}>{moneyFormat(price)}</span>
         {free_shipping && (
-          <div className={ShippingProduct}>
+          <span className={ShippingProduct}>
             <Icon
               src="http://localhost:3000/images/assets/ic_shipping.png"
               width={15}
               height={15}
             />
-          </div>
+          </span>
         )}
       </div>
+      
       <div className={TitleProduct}>{title}</div>
       <div className={CityProduct}>{state_name}</div>
-
     </section>
   );
 };

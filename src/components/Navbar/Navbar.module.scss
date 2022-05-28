@@ -2,18 +2,21 @@
 
 .NavbarContainer {
   background-color: $brand_primary_color !important;
-  width:100%;
   height: 56px;
-  display:flex;
   justify-content: center;
-}
+  display: flex;
 
-.NavbarIcon {
-  height: 100%;
-  padding:8px 24px 5px 0;
+  .NavbarSubcontainer {
+    min-width: 1028px;
+    display: flex;
+  }
 
-  span {
-  height: inherit !important;
+  .NavbarIcon {
+    height: 100%;
+    padding: 8px 24px 5px 0;
 
+    span {
+      height: inherit !important;
+    }
   }
 }
