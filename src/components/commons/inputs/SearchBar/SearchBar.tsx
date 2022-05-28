@@ -25,16 +25,23 @@ const SearchBar = ({ searchPath = '/items?search=' }: SearchBarProps) => {
     if (event?.keyCode === 13) handleSubmit(event);
   };
 
+  const { SearchBarContainer, InputSearch, IconSearch } = style;
+
   return (
-    <div className={style.SearchBarContainer}>
+    <div className={SearchBarContainer}>
       <input
-        className={style.InputSearch}
+        className={InputSearch}
         ref={searchInputRef}
         type={'text'}
         placeholder="Nunca dejes de buscar"
         onKeyDown={handleKeyDown}
       />
-      <button onClick={handleSubmit}>Go</button>
+      <div className={IconSearch}>
+        <img
+          src="http://localhost:3000/images/assets/ic_Search.png"
+          onClick={handleSubmit}
+        />
+      </div>
     </div>
   );
 };

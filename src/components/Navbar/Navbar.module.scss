@@ -1,4 +1,4 @@
-@import '../../styles/designTokens';
+@import '@styles/designTokens';
 
 .NavbarContainer {
   background-color: $brand_primary_color !important;
@@ -6,4 +6,14 @@
   height: 56px;
   display:flex;
   justify-content: center;
+}
+
+.NavbarIcon {
+  height: 100%;
+  padding:8px 24px 5px 0;
+
+  span {
+  height: inherit !important;
+
+  }
 }

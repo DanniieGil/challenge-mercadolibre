@@ -1,6 +1,5 @@
-@import '../../../styles/mixins';
-@import '../../../styles/designTokens';
-
+@import '@styles/mixins';
+@import '@styles/designTokens';
 
 .PRIMARY {
   @include buttonTheme($button_primary_color);

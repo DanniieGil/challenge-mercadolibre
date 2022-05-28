@@ -12,8 +12,8 @@ type IconProps = {
 };
 
 const Icon = ({
-  src = 'http://localhost:3000/images/assets/Logo_ML.png',
-  width = 80,
+  src = 'http://localhost:3000/images/assets/Logo_ML@2x.png',
+  width = 65,
   height = 100,
   quality = 100,
   priority = true,
@@ -35,11 +35,3 @@ const Icon = ({
 };
 
 export default Icon;
-
-{
-  /* <img
-        src="/images/assets/Logo_ML.png"
-        alt="Logo MeLi"
-        onClick={() => router.push('/')}
-      /> */
-}

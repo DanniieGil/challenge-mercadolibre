@@ -1,11 +1,35 @@
-@import '../../../../styles/designTokens';
+@import '@styles/designTokens';
 
 .SearchBarContainer {
   font-size: $typography_size_sm4;
+  display: flex;
+  margin-top: 8px;
 
-  .InputSearch{
+  .InputSearch {
     width: 598px;
     height: 39px;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+    border: 0 rgba(0, 0, 0, 0.2);
+    padding: 7px 60px 9px 15px;
+    border-radius: 2px 0 0 2px;
 
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .IconSearch {
+    background-color: $background_color_gray_1;
+    border: 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+    max-height: 39px;
+    width: 40px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 0 2px 2px 0;
+
+    img {
+      margin: auto;
+    }
   }
 }

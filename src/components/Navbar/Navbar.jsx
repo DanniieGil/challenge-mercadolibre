@@ -3,10 +3,14 @@ import Icon from '@components/commons/Icon/Icon';
 import style from './Navbar.module.scss';
 
 const Navbar = () => {
+  const { NavbarContainer, NavbarIcon } = style;
+  
   return (
-    <header className={style.NavbarContainer}>
-      <Icon />
-      <SearchBar searchPath='/items?search=' />
+    <header className={NavbarContainer}>
+      <div className={NavbarIcon}>
+        <Icon />
+      </div>
+      <SearchBar searchPath="/items?search=" />
     </header>
   );
 };

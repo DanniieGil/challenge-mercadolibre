@@ -21,27 +21,14 @@
     "jsx": "preserve",
     "paths": {
       "@components/*": ["src/components/*"],
-      "@context/*": [
-        "src/Context/*"
-      ],
-      "@commons/*": [
-        "src/components/commons/*"
-      ],
-      "@services/*": [
-        "src/services/*"
-      ],
-      "@hooks/*": [
-        "src/hooks/*"
-      ],
-      "@tools/*": [
-        "src/tools/*"
-      ],
-      "@mappers/*": [
-        "src/mappers/*"
-      ],
-      "@dtos/*": [
-        "src/shared/dtos/*"
-      ]
+      "@context/*": ["src/Context/*"],
+      "@commons/*": ["src/components/commons/*"],
+      "@services/*": ["src/services/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@tools/*": ["src/tools/*"],
+      "@mappers/*": ["src/mappers/*"],
+      "@dtos/*": ["src/shared/dtos/*"],
+      "@styles/*": ["src/styles/*"],
     }
   },
   "include": [
@@ -49,7 +36,5 @@
     "**/*.ts",
     "**/*.tsx"
 ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
