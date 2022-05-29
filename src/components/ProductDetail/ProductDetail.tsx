@@ -8,18 +8,12 @@ import style from './ProductDetail.module.scss';
 const ProductDetail = ({ productDetail }) => {
   const { description, condition, picture, price, sold_quantity, title } = productDetail;
 
-  let canonicalUrl
-  if (typeof window !== 'undefined') {
-    canonicalUrl = window.location;
-  }
-
   return (
     <>
       <Head
         title={`${title} | Mercado Libre`}
         description={description}
         image={picture}
-        url={canonicalUrl}
       />
       
       <section className={style.ProductDetailContainer}>
