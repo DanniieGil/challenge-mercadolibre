@@ -1,10 +1,10 @@
 import Icon from '@components/commons/Icon/Icon';
 import style from './ProductNotFound.module.scss';
-const { Container, MainTitle, List } = style;
+const { ProductNotFoundContainer, MainTitle, List } = style;
 
 const ProductNotFound = () => {
   return (
-    <section className={Container}>
+    <section className={ProductNotFoundContainer}>
       <Icon src="/images/Productnotfound.svg" width={80} height={80}/>
       <div className={MainTitle}>No hay publicaciones que coincidan con tu búsqueda.</div>
       <ul className={List}>

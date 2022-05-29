@@ -9,3 +9,6 @@
 .vercel
 # .env.local
 # .env
+
+# jest
+__snapshots__

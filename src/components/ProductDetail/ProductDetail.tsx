@@ -15,6 +15,7 @@ const ProductDetail = ({ productDetail }) => {
     title,
   } = productDetail;
 
+
   return (
     <>
       <section className={style.ProductDetailContainer}>

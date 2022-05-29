@@ -38,11 +38,14 @@ const SearchBar = ({ searchPath = '/items?search=' }: SearchBarProps) => {
         type={'text'}
         placeholder="Nunca dejes de buscar"
         onKeyDown={handleKeyDown}
+        role="searchproduct"
       />
       <div className={IconSearch}>
         <img
           src="http://localhost:3000/images/assets/ic_Search.png"
           onClick={handleSubmit}
+          alt="Buscar producto | Mercado Libre"
+          title="Buscar product en Mercado Libre"
         />
       </div>
     </div>

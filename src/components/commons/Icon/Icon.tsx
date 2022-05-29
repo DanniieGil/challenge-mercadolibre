@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import router from 'next/router';
 import style from './Icon.module.scss';
 
 type IconProps = {

@@ -1,5 +1,5 @@
 import Icon from '@components/commons/Icon/Icon';
-import { moneyFormat } from 'src/utils/moneyFormat';
+import { moneyFormat } from '@utils/moneyFormat';
 import style from './ProductCard.module.scss';
 
 type ProductCardProps = {
@@ -31,14 +31,14 @@ const ProductCard = ({
   } = style;
 
   return (
-    <section className={ProductCardContainer} onClick={onClick}>
+    <section className={ProductCardContainer} onClick={onClick} role="product_card">
       <img
         className={ImageProduct}
         src={picture}
         alt={`Foto de ${title} | Mercado Libre`}
       />
 
-      <div className={SubContainer}>
+      <div className={SubContainer} >
         <span className={PriceProduct}>{moneyFormat(price)}</span>
         {free_shipping && (
           <span className={ShippingProduct}>

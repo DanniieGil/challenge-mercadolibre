@@ -1,7 +1,7 @@
-import { GetProductDetailMapper } from 'src/shared/mappers/api/get-product-detail.mapper';
 import { NextApiRequest, NextApiResponse } from 'next';
 import useFetch from '@hooks/useFetch';
 import endPoints from '@services/api';
+import { GetProductDetailMapper } from '@mappers/api/get-product-detail.mapper';
 
 const GetProductDetail = async (request: NextApiRequest, response: NextApiResponse) => {
   const { idProduct } = request.query;

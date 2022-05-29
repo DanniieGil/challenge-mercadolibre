@@ -22,11 +22,12 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@context/*": ["src/context/*"],
+      "@pages/*": ["src/pages/*"],
       "@commons/*": ["src/components/commons/*"],
       "@services/*": ["src/services/*"],
       "@hooks/*": ["src/hooks/*"],
       "@tools/*": ["src/tools/*"],
-      "@mappers/*": ["src/mappers/*"],
+      "@mappers/*": ["src/shared/mappers/*"],
       "@dtos/*": ["src/shared/dtos/*"],
       "@styles/*": ["src/styles/*"],
       "@utils/*": ["src/utils/*"],

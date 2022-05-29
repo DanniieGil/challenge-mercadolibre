@@ -1,7 +1,6 @@
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import ProductCard from '@components/ProductCard/ProductCard';
-import style from '@components/ProductCard/ProductCard.module.scss';
 import { Head } from '@context/share/Seo/components/Head';
 import useFetch from '@hooks/useFetch';
 import ProductNotFound from '@components/ProductNotFound/ProductNotFound';
@@ -9,7 +8,6 @@ import LabelCategory from '@components/LabelCategory/LabelCategory';
 
 const ProductCatalog = ({ productList, query }) => {
   const { items, categories } = productList;
-  const { ContainerProducts } = style;
   const router = useRouter();
 
   const goToDetailProduct = ({ idProduct }) => {
@@ -18,14 +16,13 @@ const ProductCatalog = ({ productList, query }) => {
 
   const emptyCatalogProduct = () => {
     const productListStatus = items?.length;
-    console.log(productListStatus);
     if (productListStatus <= 0 || productListStatus === undefined) {
       return true;
     }
   };
 
   return (
-    <section className={ContainerProducts}>
+    <section className={'ProductCatalog'}>
       <Head title={query && items?.length >= 1 ? `${query} | MercadoLibre` : undefined} />
 
       {emptyCatalogProduct() ? (
@@ -33,7 +30,7 @@ const ProductCatalog = ({ productList, query }) => {
       ) : (
         <>
           <LabelCategory categories={categories} />
-          <div className={'ContainerProducts'}>
+          <div>
             {items.map((product) => {
               const { id, title, price, free_shipping, picture, state_name } = product;
               const { amount } = price;
