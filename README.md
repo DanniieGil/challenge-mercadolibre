@@ -81,7 +81,7 @@ Caracteristicas del proyecto:
    ```
 3. Ejecutar NextJS.
    ```sh
-   npm start
+   npm run dev
    ```
 
 ## Test
