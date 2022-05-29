@@ -12,8 +12,8 @@
 }
 
 .MainTitle {
-  font-size: 24px;
-  font-weight: 600;
+  font-size: $typography_size_md2;
+  font-weight: $fontWeight_size_sm5;
   line-height: 1.08;
   grid-column: 2;
 }
@@ -27,7 +27,7 @@
     list-style-position: outside;
     list-style-type: disc;
     margin-bottom: 3px;
-    margin-left: 18px;
+    margin-left: $margin_size_md1;
 
   }
 

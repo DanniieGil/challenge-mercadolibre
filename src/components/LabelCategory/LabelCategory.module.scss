@@ -2,14 +2,14 @@
 
 .LabelCategoryContainer{
   top: 56px;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  font-size: 14px;
+  margin-top: $margin_size_sm5;
+  margin-bottom: $margin_size_sm5;
+  font-size: $typography_size_sm2;
   color: $brand_quaternary_color;
 
   @media screen and (max-width: 480px) {
-    margin-left: 16px;
-    margin-bottom: 12px;
-    font-size: 12px;
+    margin-left: $margin_size_sm5;
+    margin-bottom: $margin_size_sm3;
+    font-size: $typography_size_sm1;
   }
 }

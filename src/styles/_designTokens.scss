@@ -9,7 +9,6 @@ $brand_blank_color:       #EEEEEE;
 $button_primary_color:    #3483FA;
 $button_secondary_color:  #999999;
 
-
 // PALLETTE EXTENDED
 $background_color_gray_1:  #ededed;
 $background_color_white_1: #ffffff;
@@ -30,6 +29,18 @@ $typography_size_lg2 : 34px;
 $typography_size_lg3 : 36px;
 $typography_size_lg4 : 38px;
 $typography_size_lg5 : 46px;
+
+//FONT_WEIGHT
+$fontWeight_size_sm1 : 100;
+$fontWeight_size_sm2 : 200;
+$fontWeight_size_sm3 : 300;
+$fontWeight_size_sm4 : 400;
+$fontWeight_size_sm5 : 500;
+$fontWeight_size_md1 : 600;
+$fontWeight_size_md2 : 700;
+$fontWeight_size_md3 : 800;
+$fontWeight_size_md4 : 900;
+$fontWeight_size_md5 : 1000;
 
 // LINE_HEIGHT
 $lineHeight_size_sm1 : 12px;
@@ -55,6 +66,20 @@ $lineWeight_regular  : '400';
 $lineWeight_bold     : '500';
 $lineWeight_black    : '600';
 
+// MARGIN
+$margin_size_sm1 : 8px;
+$margin_size_sm2 : 10px;
+$margin_size_sm3 : 12px;
+$margin_size_sm4 : 14px;
+$margin_size_sm5 : 16px;
+$margin_size_md1 : 18px;
+$margin_size_md2 : 20px;
+$margin_size_md3 : 22px;
+$margin_size_md4 : 24px;
+$margin_size_md5 : 26px;
+$margin_size_lg1 : 28px;
+$margin_size_lg2 : 30px;
+$margin_size_lg3 : 32px;
 
 // FONTS-FAMILY
 @font-face {

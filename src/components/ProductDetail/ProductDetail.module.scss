@@ -29,7 +29,7 @@
 
     .ProductImage {
       grid-column: 1 1;
-      margin-right: 32px;
+      margin-right: $margin_size_lg3;
       transition: all 0.5s ease;
 
       @media screen and (max-width: 1000px) {
@@ -45,37 +45,37 @@
     .ProductDetailSubContainer__1 {
       grid-column: 2;
       grid-row: 1;
-      margin-top: 32px;
+      margin-top: $margin_size_lg3;
       width: fit-content;
 
       .ProductCondition {
         font-size: $typography_size_sm2;
-        margin-bottom: 16px;
+        margin-bottom: $margin_size_sm5;
       }
 
       .ProductTitle {
         font-size: $typography_size_md2;
-        font-weight: 900;
-        margin-bottom: 32px;
-        margin-right: 32px;
+        font-weight: $fontWeight_size_md4;
+        margin-bottom: $margin_size_lg3;
+        margin-right: $margin_size_lg3;
       }
 
       .ProductPrice {
         font-size: $typography_size_lg5;
-        margin-bottom: 32px;
+        margin-bottom: $margin_size_lg3;
       }
 
       .ProductCTA {
-        margin-right: 32px;
+        margin-right: $margin_size_lg3;
       }
     }
 
     .ProductDescriptionTitle {
       font-size: $typography_size_md4;
-      margin-top: 32px;
-      margin-bottom: 32px;
-      margin-left: 32px;
-      font-weight: 600;
+      margin-top: $margin_size_lg3;
+      margin-bottom: $margin_size_lg3;
+      margin-left: $margin_size_lg3;
+      font-weight: $fontWeight_size_md1;
 
       @media screen and (max-width: 750px) {
         margin-left: 0;
@@ -83,12 +83,12 @@
     }
 
     .ProductDescriptionContent {
-      margin-left: 32px;
+      margin-left: $margin_size_lg3;
       font-size: $typography_size_sm3;
       width: 100%;
       grid-column: 1;
       grid-row: 1;
-      margin-bottom: 32px;
+      margin-bottom: $margin_size_lg3;
 
       @media screen and (max-width: 750px) {
         margin-left: 0;

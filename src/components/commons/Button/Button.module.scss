@@ -3,7 +3,7 @@
 
 .PRIMARY {
   @include buttonTheme($button_primary_color);
-  font-size: 16px;
+  font-size: $typography_size_sm3;
   height: 48px;
   width: 100%;
   border-color: transparent;
@@ -14,7 +14,7 @@
 
 .SECONDARY {
   @include buttonTheme($button_secondary_color);
-  font-size: 16px;
+  font-size: $typography_size_sm3;
   height: 48px;
   max-width: 223px;
   min-width: 223px;
