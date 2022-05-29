@@ -15,7 +15,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     url: `${PUBLIC_URL_SERVER}/api/items/${idProduct}`,
   });
 
-  if (!!response.item.id) {
+  if (!!response?.item.id) {
     return {
       props: {
         productDetail: response.item,
