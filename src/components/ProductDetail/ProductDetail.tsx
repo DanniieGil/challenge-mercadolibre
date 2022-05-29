@@ -4,11 +4,9 @@ import { Head } from '@context/share/Seo/components/Head';
 import { moneyFormat } from '@utils/moneyFormat';
 import { useRouter } from 'next/router';
 import style from './ProductDetail.module.scss';
-const PUBLIC_URL_SERVER = process.env.PUBLIC_URL_SERVER;
 
 const ProductDetail = ({ productDetail }) => {
   const { description, condition, picture, price, sold_quantity, title } = productDetail;
-  const { asPath } = useRouter();
 
   let canonicalUrl
   if (typeof window !== 'undefined') {
@@ -23,6 +21,7 @@ const ProductDetail = ({ productDetail }) => {
         image={picture}
         url={canonicalUrl}
       />
+      
       <section className={style.ProductDetailContainer}>
         <LabelCategory categories={['Consola Video juegos Prueba', 'Xbox One']} />
 
