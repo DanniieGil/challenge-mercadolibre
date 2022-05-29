@@ -67,10 +67,16 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     url: `${PUBLIC_URL_SERVER}/api/items?q=${search}`,
   });
 
+  if (response?.items.length >= 1) {
+    return {
+      props: {
+        productList: { ...response },
+        query: query.search,
+      },
+    };
+  }
+
   return {
-    props: {
-      productList: { ...response },
-      query: query.search,
-    },
+    notFound: true,
   };
 };

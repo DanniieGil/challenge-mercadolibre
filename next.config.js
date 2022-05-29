@@ -8,12 +8,6 @@ module.exports = {
     domains: ['localhost', 'challenge-mercadolibre.vercel.app'],
   },
   async redirects() {
-    return [
-      {
-        source: '/items',
-        destination: '/',
-        permanent: true,
-      },
-    ];
+    return [];
   },
 }
