@@ -1,7 +1,7 @@
 import ProductDetail from '@components/ProductDetail/ProductDetail';
 import useFetch from '@hooks/useFetch';
 import { GetServerSideProps } from 'next/types';
-const PUBLIC_URL_SERVER = process.env.PUBLIC_URL_SERVER
+const PUBLIC_URL_SERVER = process.env.PUBLIC_URL_SERVER;
 
 const ProductItem = ({ productDetail }) => {
   return <ProductDetail productDetail={productDetail} />;
@@ -15,9 +15,15 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     url: `${PUBLIC_URL_SERVER}/api/items/${idProduct}`,
   });
 
+  if (!!response.item.id) {
+    return {
+      props: {
+        productDetail: response.item,
+      },
+    };
+  }
+
   return {
-    props: {
-      productDetail: response.item,
-    },
+    notFound: true,
   };
 };
