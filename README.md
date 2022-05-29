@@ -1,6 +1,6 @@
 # DanniieGil-challenge-mercadolibre
 
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/danniegil/]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -107,4 +107,4 @@ Project Link: [https://github.com/DanniieGil/challenge-mercadolibre/](https://gi
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/DanniieGil
+[linkedin-url]: https://www.linkedin.com/in/danniegil/
