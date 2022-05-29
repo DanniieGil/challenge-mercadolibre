@@ -6,7 +6,7 @@
 <br />
 <p align="center">
   <a href="https://www.mercadolibre.com.co/">
-    <img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.18.9/mercadolibre/logo__large_plus.png" alt="Logo" width="350" height="120">
+    <img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.18.9/mercadolibre/logo__large_plus.png" alt="Logo" width="250" >
   </a>
 
   <h3 align="center">Mercado Libre Front-End Challenge</h3>
