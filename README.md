@@ -81,7 +81,7 @@ Caracteristicas del proyecto:
    ```
 3. Ejecutar NextJS.
    ```sh
-   npm run dev
+   npm run start
    ```
 
 ## Test
@@ -89,6 +89,13 @@ Caracteristicas del proyecto:
 1. Ejecutar Tests.
    ```sh
    npm run test
+   ```
+
+## Decisiones Técnicas
+
+ADR's guardados en:   
+```sh
+   /doc/adrs/
    ```
 
 ## Contacto
