@@ -1,6 +1,6 @@
 # DanniieGil-challenge-mercadolibre
 
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/danniegil/]
 
 <!-- PROJECT LOGO -->
 <br />
