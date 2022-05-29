@@ -3,12 +3,7 @@ import useFetch from '@hooks/useFetch';
 import { GetServerSideProps } from 'next/types';
 
 const ProductItem = ({ productDetail }) => {
-  console.log(productDetail)
-  return (
-    <>
-      <ProductDetail productDetail={productDetail} />
-    </>
-  );
+  return <ProductDetail productDetail={productDetail} />;
 };
 
 export default ProductItem;

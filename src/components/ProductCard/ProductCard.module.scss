@@ -1,7 +1,5 @@
 @import '@styles/designTokens';
 
-
-
 .ProductCardContainer {
   display: grid;
   background-color: $background_color_white_1;
@@ -17,24 +15,55 @@
     border-bottom: 1px solid rgb(212, 211, 211);
   }
 
+  @media only screen and (max-width: 480px) {
+    margin-left: 16px;
+    margin-right: 16px;
+    grid-template-columns: auto auto;
+    grid-template-rows: 50px 110px;
+    max-width: fit-content;
+  }
+
+  @media only screen and (min-width: 480px) and (max-width: 681px) {
+    max-width: fit-content;
+  }
+  
+
   .ImageProduct {
     grid-column-start: 1;
     grid-row: 1/3;
-    width: 180px;
+    width: 100%;
+    max-width: 180px;
     height: 180px;
     margin-left: 16px;
     margin-right: 16px;
     border-radius: 4px;
+    transition: all 0.5s ease;
+
+    @media only screen and (max-width: 480px) {
+      width: 120px;
+      height: 120px;
+    }
+
+    @media only screen and (min-width: 480px) and (max-width: 681px) {
+      width: 150px;
+      height: 150px;
+    }
   }
 
   .SubContainer {
     height: fit-content;
     margin-top: 9px;
     margin-bottom: 32px;
+    width: min-content;
+    inline-size: auto;
 
     .PriceProduct {
-      font-size: $lineHeight_size_md2;
+      font-size: $typography_size_md2;
       color: $brand_quaternary_color;
+
+      @media only screen and (max-width: 480px) {
+        font-size: $typography_size_sm4;
+      }
     }
 
     .ShippingProduct {
@@ -48,15 +77,25 @@
     color: $brand_tertiary_color;
     grid-column-start: 2;
     grid-row-start: 2;
+
+    @media only screen and (max-width: 480px) {
+      width: 170px;
+    }
+
   }
 
-  .CityProduct{
+  .CityProduct {
     font-size: $typography_size_sm1;
-    color:$brand_tertiary_color;
+    color: $brand_tertiary_color;
     margin-top: 20px;
     grid-column-start: 3;
     text-align-last: right;
+
+    @media only screen and (max-width: 900px) {
+      display: flex;
+      grid-column-start: 2;
+      margin-top: 0;
+      grid-row-start: 3;
+    }
   }
-
-
 }

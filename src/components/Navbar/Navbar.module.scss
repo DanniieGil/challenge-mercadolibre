@@ -6,9 +6,13 @@
   justify-content: center;
   display: flex;
 
+
   .NavbarSubcontainer {
-    min-width: 1028px;
+    width: 1052px;
+    max-width: 1052px;
     display: flex;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   .NavbarIcon {

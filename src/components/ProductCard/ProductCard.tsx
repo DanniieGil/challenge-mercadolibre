@@ -19,7 +19,6 @@ const ProductCard = ({
   state_name,
   onClick,
 }: ProductCardProps) => {
-  
   const {
     ProductCardContainer,
     SubContainer,
@@ -27,18 +26,18 @@ const ProductCard = ({
     PriceProduct,
     TitleProduct,
     ShippingProduct,
-    CityProduct
+    CityProduct,
   } = style;
 
   return (
     <section className={ProductCardContainer} onClick={onClick} role="product_card">
       <img
-        className={ImageProduct}
+        className={`${ImageProduct}`}
         src={picture}
         alt={`Foto de ${title} | Mercado Libre`}
       />
 
-      <div className={SubContainer} >
+      <div className={SubContainer}>
         <span className={PriceProduct}>{moneyFormat(price)}</span>
         {free_shipping && (
           <span className={ShippingProduct}>
@@ -50,7 +49,7 @@ const ProductCard = ({
           </span>
         )}
       </div>
-      
+
       <div className={TitleProduct}>{title}</div>
       <div className={CityProduct}>{state_name}</div>
     </section>

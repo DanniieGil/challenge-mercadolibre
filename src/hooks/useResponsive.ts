@@ -30,5 +30,13 @@ export function useResponsive() {
     };
   }, []);
 
-  return { ...sizesValues };
+  if (sizesValues.isMobile) {
+    return 'isMobile';
+  }
+  if (sizesValues.isMediumSize) {
+    return 'isMediumSize';
+  }
+  if (sizesValues.isDesktop) {
+    return 'isDesktop';
+  }
 }

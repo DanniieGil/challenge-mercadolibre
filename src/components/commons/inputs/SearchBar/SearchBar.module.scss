@@ -13,10 +13,15 @@
     padding: 7px 60px 9px 15px;
     border-radius: 2px 0 0 2px;
     font-size: $typography_size_sm4;
+    transition: all 0.5s ease;
 
     &:focus {
       outline: none;
     }
+
+    @media only screen and (max-width: 480px) {
+      font-size: $typography_size_sm3;
+  }
   }
 
   .IconSearch {

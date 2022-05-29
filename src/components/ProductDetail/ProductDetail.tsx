@@ -4,17 +4,7 @@ import { moneyFormat } from '@utils/moneyFormat';
 import style from './ProductDetail.module.scss';
 
 const ProductDetail = ({ productDetail }) => {
-  const {
-    description,
-    condition,
-    free_shipping,
-    id,
-    picture,
-    price,
-    sold_quantity,
-    title,
-  } = productDetail;
-
+  const { description, condition, picture, price, sold_quantity, title } = productDetail;
 
   return (
     <>

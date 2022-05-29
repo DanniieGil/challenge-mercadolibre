@@ -5,6 +5,7 @@ import { Head } from '@context/share/Seo/components/Head';
 import useFetch from '@hooks/useFetch';
 import ProductNotFound from '@components/ProductNotFound/ProductNotFound';
 import LabelCategory from '@components/LabelCategory/LabelCategory';
+import { useResponsive } from '@hooks/useResponsive';
 
 const ProductCatalog = ({ productList, query }) => {
   const { items, categories } = productList;
