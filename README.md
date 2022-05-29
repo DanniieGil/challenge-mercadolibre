@@ -46,22 +46,21 @@
 
 ### Acerca del Proyecto
 
-Proyecto realizado como Challenge para Front-End en Aptuno.com
+Proyecto realizado como Challenge para Front-End en Mercado Libre
 
 Caracteristicas del proyecto:
 
-- Ver inmuebles y sus propiedades.
-- Ver detalle e información de un inmueble.
-- Filtrar lista de inmuebles por región y cantidad de habitaciones.
-- Paginación
+- Buscar productos en Mercado Libre.
+- Ver detalle e información de un producto.
 
 ### Built With
 
 - [React](https://es.reactjs.org/)
-- [Redux](https://es.redux.js.org/)
-- [JQuery](https://jquery.com)
+- [NextJS](https://nextjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
 - [Axios](https://www.npmjs.com/package/axios)
 - [Sass](https://www.npmjs.com/package/sass)
+- [Jest](https://jestjs.io/)
 
 ### Prerequisitos
 
@@ -72,20 +71,15 @@ Caracteristicas del proyecto:
 
 ### Instalacion
 
-1. Lista de inmuebles API en [properties.json](https://raw.githubusercontent.com/aptuno/code-challenge/master/challenges/data/properties.json)
-2. Clonar repositorio.
+1. Clonar repositorio.
    ```sh
-   git clone https://github.com/DanniieGil/DanniieGil-aptuno-frontend/
+   git clone https://github.com/DanniieGil/challenge-mercadolibre/
    ```
-3. Abrir carpeta client
+2. Install NPM paquetes y dependencias.
    ```sh
-   cd client
+   npm install | yarn install
    ```
-4. Install NPM paquetes y dependencias.
-   ```sh
-   npm install
-   ```
-5. Ejecutar React.
+3. Ejecutar NextJS.
    ```sh
    npm start
    ```
@@ -96,17 +90,6 @@ Caracteristicas del proyecto:
    ```sh
    npm run test
    ```
-
-## Decisiones Técnicas
-
-Como patrón de diseño se implementó el Modelo de Fábrica fundamentalmente en la elaboración de las actions y reducer para Redux.
-Adicionalmente a traves de la implementación de React [useStatese, ContexApi, etc], se fundamentó la mayor parte del proyecto en el Modelo Observador, dada las caracteristicas del Framework estableciendo una relación de dependencia entre los componentes.
-
-Para optimizar la escalabilidad del proyecto, no se implementó ningun libreria se diseño prefabricado, tanto el carrusel de imagenes, paginación y filtros se desarrollaro ncon Vanilla JS y SCSS. Se desarrolló la paginación y los filtros a traves del Modelo de Estrategía encapsulando independientemente cada condicional para la toma de decisiones en los algoritmos, la meta de los condicionales estaba limitada hasta máximo 5 condicionales.
-
-El manejo de la información entre los componentes y funciones de la aplicación se estipuló con Redux un 90% y Context-Api 10%, esto con el objetivo de garantizar el manejo de la información para futuras secciones del proyecto.
-
-La segmentacion de los filtros es dinámica, es decir que funciona incluso para la añadidura de nuevas regiones o nuevas habitaciones asi como tambien la combinacion de ambos filtros.
 
 ## Contacto
 
