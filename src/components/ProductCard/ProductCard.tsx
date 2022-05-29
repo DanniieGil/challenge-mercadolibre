@@ -42,7 +42,7 @@ const ProductCard = ({
         {free_shipping && (
           <span className={ShippingProduct}>
             <Icon
-              src="http://localhost:3000/images/assets/ic_shipping.png"
+              src="/images/assets/ic_shipping.png"
               width={15}
               height={15}
             />

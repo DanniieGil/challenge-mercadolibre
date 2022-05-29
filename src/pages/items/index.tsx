@@ -5,7 +5,7 @@ import { Head } from '@context/share/Seo/components/Head';
 import useFetch from '@hooks/useFetch';
 import ProductNotFound from '@components/ProductNotFound/ProductNotFound';
 import LabelCategory from '@components/LabelCategory/LabelCategory';
-import { useResponsive } from '@hooks/useResponsive';
+const PUBLIC_URL_SERVER = process.env.PUBLIC_URL_SERVER;
 
 const ProductCatalog = ({ productList, query }) => {
   const { items, categories } = productList;
@@ -64,7 +64,7 @@ export default ProductCatalog;
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const { search } = query;
   const response = await useFetch({
-    url: `http://localhost:3000/api/items?q=${search}`,
+    url: `${PUBLIC_URL_SERVER}/api/items?q=${search}`,
   });
 
   return {

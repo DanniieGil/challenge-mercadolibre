@@ -42,7 +42,7 @@ const SearchBar = ({ searchPath = '/items?search=' }: SearchBarProps) => {
       />
       <div className={IconSearch}>
         <img
-          src="http://localhost:3000/images/assets/ic_Search.png"
+          src="/images/assets/ic_Search.png"
           onClick={handleSubmit}
           alt="Buscar producto | Mercado Libre"
           title="Buscar product en Mercado Libre"

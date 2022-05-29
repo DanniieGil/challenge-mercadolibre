@@ -5,6 +5,6 @@ module.exports = {
     includePaths: [path.join(__dirname, 'styles')],
   },
   images: {
-    domains: ['localhost'],
+    domains: ['localhost', 'challenge-mercadolibre.vercel.app'],
   },
 }

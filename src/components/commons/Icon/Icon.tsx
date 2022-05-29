@@ -11,7 +11,7 @@ type IconProps = {
 };
 
 const Icon = ({
-  src = 'http://localhost:3000/images/assets/Logo_ML@2x.png',
+  src = '/images/assets/Logo_ML@2x.png',
   width = 65,
   height = 100,
   quality = 100,
