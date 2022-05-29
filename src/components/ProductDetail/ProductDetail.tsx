@@ -1,13 +1,28 @@
 import Button, { ButtonVariants } from '@components/commons/Button/Button';
 import LabelCategory from '@components/LabelCategory/LabelCategory';
+import { Head } from '@context/share/Seo/components/Head';
 import { moneyFormat } from '@utils/moneyFormat';
+import { useRouter } from 'next/router';
 import style from './ProductDetail.module.scss';
+const PUBLIC_URL_SERVER = process.env.PUBLIC_URL_SERVER;
 
 const ProductDetail = ({ productDetail }) => {
   const { description, condition, picture, price, sold_quantity, title } = productDetail;
+  const { asPath } = useRouter();
+
+  let canonicalUrl
+  if (typeof window !== 'undefined') {
+    canonicalUrl = window.location;
+  }
 
   return (
     <>
+      <Head
+        title={`${title} | Mercado Libre`}
+        description={description}
+        image={picture}
+        url={canonicalUrl}
+      />
       <section className={style.ProductDetailContainer}>
         <LabelCategory categories={['Consola Video juegos Prueba', 'Xbox One']} />
 
@@ -23,7 +38,7 @@ const ProductDetail = ({ productDetail }) => {
           <main className={style.ProductDetailSubContainer__1}>
             <div className={style.ProductCondition}>
               {condition === 'new' ? 'Nuevo' : 'Usado'}
-              
+
               {sold_quantity > 0 ? ` - ${sold_quantity} vendidos` : ''}
             </div>
 
