@@ -19,8 +19,7 @@ a {
 }
 
 .ProductCatalog {
-  width: fit-content;
   margin: auto;
-  width: 1028px;
+  max-width: 1028px;
   border-radius: 4px 4px 0 0;
 }

@@ -2,7 +2,6 @@ import Button, { ButtonVariants } from '@components/commons/Button/Button';
 import LabelCategory from '@components/LabelCategory/LabelCategory';
 import { Head } from '@context/share/Seo/components/Head';
 import { moneyFormat } from '@utils/moneyFormat';
-import { useRouter } from 'next/router';
 import style from './ProductDetail.module.scss';
 
 const ProductDetail = ({ productDetail }) => {

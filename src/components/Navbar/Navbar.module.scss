@@ -6,13 +6,15 @@
   justify-content: center;
   display: flex;
 
-
   .NavbarSubcontainer {
-    width: 1052px;
-    max-width: 1052px;
+    width: 1028px;
+    max-width: 1028px;
     display: flex;
-    padding-left: 24px;
-    padding-right: 24px;
+    
+    @media screen and (max-width: 468px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
   }
 
   .NavbarIcon {
