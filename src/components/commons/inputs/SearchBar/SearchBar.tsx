@@ -38,7 +38,6 @@ const SearchBar = ({ searchPath = '/items?search=' }: SearchBarProps) => {
         type={'text'}
         placeholder="Nunca dejes de buscar"
         onKeyDown={handleKeyDown}
-        role="searchproduct"
       />
       <div className={IconSearch}>
         <img
