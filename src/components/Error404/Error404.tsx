@@ -6,7 +6,7 @@ const Error404 = () => {
 
   return (
     <section className={Error404Container}>
-      <Icon src="/images/404.svg" width={251} height={154} />
+      <Icon src="/images/404.svg" width={251} height={154} altImage="Error 404 | Mercado Libre" />
       <div className={MainTitle}>Parece que esta página no existe</div>
       <div className={SecondaryMessage}>Ir a la página principal</div>
     </section>

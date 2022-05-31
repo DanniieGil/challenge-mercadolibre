@@ -5,7 +5,7 @@ const { ProductNotFoundContainer, MainTitle, List } = style;
 const ProductNotFound = () => {
   return (
     <section className={ProductNotFoundContainer}>
-      <Icon src="/images/productnotfound.svg" width={80} height={80}/>
+      <Icon src="/images/productnotfound.svg" width={80} height={80} altImage="Producto no encontrado | Mercado Libre"/>
       <div className={MainTitle}>No hay publicaciones que coincidan con tu búsqueda.</div>
       <ul className={List}>
         <li>

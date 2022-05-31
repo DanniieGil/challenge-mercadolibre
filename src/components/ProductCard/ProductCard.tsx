@@ -45,6 +45,7 @@ const ProductCard = ({
               src="/images/assets/ic_shipping.png"
               width={15}
               height={15}
+              altImage="Envío gratis | Mercado Libre"
             />
           </span>
         )}

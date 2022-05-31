@@ -15,7 +15,7 @@ const Navbar = () => {
     <header className={NavbarContainer}>
       <div className={NavbarSubcontainer}>
         <div className={NavbarIcon}>
-          <Icon onclick={handleHome} />
+          <Icon onclick={handleHome} altImage="Logo Oficial de Mercado Libre"/>
         </div>
         <SearchBar searchPath="/items?search=" />
       </div>

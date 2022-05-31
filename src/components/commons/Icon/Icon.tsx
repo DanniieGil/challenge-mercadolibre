@@ -7,6 +7,7 @@ type IconProps = {
   height?: number;
   quality?: number;
   priority?: boolean;
+  altImage?: string;
   onclick?: () => void;
 };
 
@@ -16,6 +17,7 @@ const Icon = ({
   height = 100,
   quality = 100,
   priority = true,
+  altImage = 'Foto de Mercado Libre',
   onclick,
 }: IconProps) => {
   return (
@@ -28,6 +30,7 @@ const Icon = ({
         quality={quality}
         priority={priority}
         onClick={onclick}
+        alt={altImage}
       />
     </>
   );
